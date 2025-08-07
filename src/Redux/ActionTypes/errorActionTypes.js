@@ -1,0 +1,4 @@
+export const HANDLEERROR = 'HANDLEERROR'
+export const CLEARERROR = 'CLEARERROR'
+export const CLEARALL = 'CLEARALL'
+export const START_ERROR_REMOVAL = 'START_ERROR_REMOVAL'

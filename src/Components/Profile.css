@@ -1,0 +1,159 @@
+/* Profile Container */
+.profile-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+}
+
+/* Profile Card */
+.profile-card {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.profile-avatar-container {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border: 1px solid #f0f0f0;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-detail-group {
+  margin-bottom: 1.5rem;
+}
+
+.profile-detail-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #888;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.profile-detail-value {
+  font-size: 1rem;
+  color: #000;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Buttons */
+.profile-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.edit-profile-btn,
+.delete-account-btn {
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-size: 0.8rem;
+  --bs-btn-border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.edit-profile-btn {
+  --bs-btn-color: #000;
+  --bs-btn-border-color: #000;
+  --bs-btn-hover-bg: #000;
+  --bs-btn-hover-color: #fff;
+}
+
+.delete-account-btn {
+  --bs-btn-bg: #dc3545;
+  --bs-btn-border-color: #dc3545;
+  --bs-btn-hover-bg: #c82333;
+}
+
+/* Modal Styling */
+.delete-modal-header {
+  border-bottom: 1px solid #000;
+}
+
+.delete-modal-footer {
+  border-top: 1px solid #f0f0f0;
+}
+
+.delete-warning-text {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-avatar {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .profile-actions {
+    flex-direction: column;
+  }
+}
+
+
+/* Profile.css - Updated with stronger specificity */
+.profile-container .delete-account-btn {
+  padding: 0.75rem 1.5rem !important;
+  font-size: 0.8rem !important;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+.profile-container .delete-account-btn:hover,
+.profile-container .delete-account-btn:focus {
+  background-color: #c82333 !important;
+  border-color: #c82333 !important;
+}
+
+/* Edit button styles */
+.profile-container .edit-profile-btn {
+  padding: 0.75rem 1.5rem !important;
+  font-size: 0.8rem !important;
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: #000 !important;
+  border: 1px solid #000 !important;
+  background-color: transparent !important;
+}
+
+.profile-container .edit-profile-btn:hover,
+.profile-container .edit-profile-btn:focus {
+  background-color: #000 !important;
+  color: #fff !important;
+}

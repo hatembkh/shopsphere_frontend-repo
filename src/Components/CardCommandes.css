@@ -1,0 +1,116 @@
+
+/* Table Row - Inspired by END.'s order history */
+tr {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Table Cells - Minimalist style */
+th, td {
+  padding: 1.25rem 0.75rem;
+  font-size: 0.8rem;
+  color: #333;
+  vertical-align: middle;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Status Badges - END.-style subtle indicators */
+.Pending {
+  color: #000;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.Pending::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #FFA500;
+  border-radius: 50%;
+}
+
+.Accepted {
+  color: #000;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.Accepted::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #28a745;
+  border-radius: 50%;
+}
+
+.Rejected {
+  color: #000;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.Rejected::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background-color: #dc3545;
+  border-radius: 50%;
+}
+
+/* Action Buttons - END.-style minimal buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  --bs-btn-padding-x: 1rem;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-font-size: 0.75rem;
+  --bs-btn-border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.accept-btn {
+  --bs-btn-bg: #000;
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: #000;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-color: #000;
+}
+
+.reject-btn {
+  --bs-btn-bg: #fff;
+  --bs-btn-color: #000;
+  --bs-btn-border-color: #000;
+  --bs-btn-hover-bg: #000;
+  --bs-btn-hover-color: #fff;
+}
+
+/* Order ID styling - Monospace like END. */
+tr td:first-child {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: #666;
+  letter-spacing: 0.5px;
+}

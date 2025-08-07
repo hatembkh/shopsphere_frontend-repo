@@ -1,0 +1,31 @@
+/* AddModal.css */
+
+.btn-custom-primary {
+  background-color: #007bff; /* bleu bootstrap */
+  border-color: #007bff;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom-primary:hover,
+.btn-custom-primary:focus {
+  background-color: #0056b3; /* bleu plus foncé au hover */
+  border-color: #004085;
+  color: white;
+}
+
+.btn-custom-secondary {
+  background-color: #6c757d; /* gris bootstrap */
+  border-color: #6c757d;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom-secondary:hover,
+.btn-custom-secondary:focus {
+  background-color: #5a6268;
+  border-color: #545b62;
+  color: white;
+}

@@ -1,0 +1,44 @@
+.confirmation-modal-body {
+  padding: 2rem;
+  text-align: center;
+}
+
+.confirmation-modal-body h5 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.confirmation-modal-body p {
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cancel-btn, .confirm-delete-btn {
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-font-size: 0.8rem;
+  --bs-btn-border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  min-width: 120px;
+}
+
+.cancel-btn {
+  --bs-btn-color: #000;
+  --bs-btn-border-color: #000;
+  --bs-btn-hover-bg: #f5f5f5;
+}
+
+.confirm-delete-btn {
+  --bs-btn-bg: #dc3545;
+  --bs-btn-border-color: #dc3545;
+  --bs-btn-hover-bg: #c82333;
+}

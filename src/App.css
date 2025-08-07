@@ -1,0 +1,465 @@
+/* Modal Overlay */
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal Content */
+.modal-content {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal Header */
+.modal-header {
+  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+  color: white;
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* Modal Body */
+.modal-body {
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+/* Form Groups */
+.form-group-custom {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-label-custom {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-control-custom {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control-custom:focus {
+  border-color: #3498db;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+}
+
+/* File Input Styling */
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.file-input-button {
+  border: 2px dashed #ced4da;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  background-color: #f8f9fa;
+}
+
+.file-input-button:hover {
+  border-color: #3498db;
+  background-color: #eaf4fd;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.file-input-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #7f8c8d;
+}
+
+.file-input-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #3498db;
+}
+
+/* Modal Footer */
+.modal-footer {
+  background-color: #f8f9fa;
+  border-top: none;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal-btn-secondary {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+}
+
+.modal-btn-secondary:hover {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.modal-btn-primary {
+  background-color: #3498db;
+  border: none;
+  color: white;
+}
+
+.modal-btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(52, 152, 219, 0.3);
+}
+
+/* Preview Image */
+.image-preview {
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 1rem;
+  border-radius: 8px;
+  display: block;
+  object-fit: contain;
+  background-color: #f1f1f1;
+}
+
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  color: white;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.user-info span {
+  font-weight: bold;
+}
+
+/* Hero section */
+.hero-section {
+  /* background: url('https://th.bing.com/th/id/R.bc6958c92f042f197463063548c3da77?rik=xwCLe1XCfuXwSw&pid=ImgRaw&r=0') center/cover no-repeat; */
+  background-color: #495057;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #444;
+}
+
+/* Explore section */
+.proHome {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+}
+
+.proHome h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Section “Latest Arrivals” */
+.latest-arrivals {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.latest-arrivals h2 {
+  font-size: 2.25rem;
+  margin-bottom: 20px;
+}
+
+/* Common for product grids */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+
+}
+
+/* View more link */
+.view-more-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 24px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.view-more-link:hover {
+  background-color: #444;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #222;
+  color: #aaa;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+.login-container {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px 0;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.register-container {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.register-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 10px 0;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+/* .edit-user-container {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.edit-user-card {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.edit-user-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.edit-user-btn {
+  width: 100%;
+  padding: 10px 0;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.product-card :hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+} */
+
+.error {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+/* ===== Overrides for END. Clothing Style ===== */
+.edit-user-card {
+  border: 1px solid #eaeaea !important; /* Sharp border */
+}
+
+.edit-user-title {
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+}
+
+/* Form inputs - Sharp edges */
+.form-control, .react-tel-input .form-control {
+  border-radius: 0 !important;
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+}
+
+/* Phone input dropdown */
+.react-tel-input .flag-dropdown {
+  border-radius: 0 !important;
+  border: 1px solid #ddd !important;
+  background: white !important;
+}
+
+/* Buttons - Black, uppercase, no radius */
+.btn {
+  border-radius: 0 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+/* Primary button - Pure black */
+.btn-primary {
+  background-color: black !important;
+  border: none !important;
+}
+
+/* Hover effect */
+.btn-primary:hover {
+  opacity: 0.9;
+  background-color: black !important;
+}
+
+/* Image preview */
+.rounded-circle {
+  border: 1px solid #eee;
+}
+
+

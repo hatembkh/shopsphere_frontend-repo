@@ -1,0 +1,31 @@
+/* END. Clothing Inspired Minimal Loader */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  gap: 1.5rem;
+}
+
+.end-loader {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loader-text {
+  font-size: 0.8rem;
+  color: #333;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

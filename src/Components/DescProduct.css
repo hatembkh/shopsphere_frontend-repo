@@ -1,0 +1,171 @@
+/* DescProduct.css - Modern Clean Design */
+
+/* Main container */
+.desc-product-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Product image */
+.product-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Product info section */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Product name */
+.product-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0;
+}
+
+/* Price */
+.product-price {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+/* Description */
+.product-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin: 1rem 0;
+}
+
+/* Meta information */
+.product-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #718096;
+}
+
+.product-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Action buttons */
+.product-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Quantity controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e2e8f0;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quantity-btn:hover {
+    background: #f7fafc;
+    border-color: #cbd5e0;
+}
+
+.quantity-value {
+    font-size: 1.2rem;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Primary buttons */
+.btn-primary {
+    background: #4299e1;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background: #3182ce;
+}
+
+/* Danger button */
+.btn-danger {
+    background: #f56565;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-danger:hover {
+    background: #e53e3e;
+}
+
+/* Success button */
+.btn-success {
+    background: #48bb78;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-success:hover {
+    background: #38a169;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .desc-product-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .product-name {
+        font-size: 2rem;
+    }
+    
+    .product-price {
+        font-size: 1.75rem;
+    }
+}
