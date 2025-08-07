@@ -72,11 +72,33 @@ export const login = (logUser, navigate) => async (dispatch) => {
 
         navigate('/Profil')
     } catch (error) {
-        error.response.data.errors.forEach(element => {
-            dispatch(handleError(element.msg))
-        });
+        if (error.response) {
+            // Check if it's a 404 (wrong endpoint)
+            if (error.response.status === 404) {
+                dispatch(handleError('Login endpoint not found. Please check the server URL.'))
+                return
+            }
+
+            // Handle other API errors
+            if (error.response.data?.errors) {
+                error.response.data.errors.forEach(element => {
+                    dispatch(handleError(element.msg))
+                })
+            } else if (error.response.data?.message) {
+                dispatch(handleError(error.response.data.message))
+            } else {
+                dispatch(handleError('Login failed. Please try again.'))
+            }
+        } else if (error.request) {
+            // The request was made but no response received
+            dispatch(handleError('Network error. Please check your connection.'))
+        } else {
+            // Something happened in setting up the request
+            dispatch(handleError('Login failed. Please try again.'))
+        }
     }
-}
+    }
+
 
 export const current = () => async (dispatch) => {
     try {
