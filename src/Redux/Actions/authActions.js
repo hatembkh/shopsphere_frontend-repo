@@ -16,7 +16,8 @@ export const register = (regUser, navigate) => async (dispatch) => {
         formData.append('name', regUser.name)
         formData.append('email', regUser.email)
         formData.append('password', regUser.password)
-
+        formData.append('adress', regUser.adress)
+        formData.append('phoneNumber', regUser.phoneNumber)
         if (regUser.imageFile) {
             formData.append('image', regUser.imageFile)
         }
@@ -57,6 +58,7 @@ export const register = (regUser, navigate) => async (dispatch) => {
 
 export const login = (logUser, navigate) => async (dispatch) => {
     try {
+        console.log('API URL:', `${apiUrl}/auth/SignIn`)
         const res = await axios.post(`${apiUrl}/auth/SignIn`, logUser)
 
         const { token, found } = res.data
