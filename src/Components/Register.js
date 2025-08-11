@@ -9,6 +9,7 @@ import { clearAll } from '../Redux/Actions/ErrorActions';
 import { CLEAR_SUCCESS } from '../Redux/ActionTypes/authActionTypes';
 
 
+
 const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -64,7 +65,7 @@ const Register = () => {
             <Form.Control
               onChange={(e) => setName(e.target.value)}
               type="text"
-              placeholder="Enter name"
+              placeholder="Enter your name"
               required
             />
           </Form.Group>
@@ -74,7 +75,7 @@ const Register = () => {
             <Form.Control
               onChange={(e) => setEmail(e.target.value)}
               type="email"
-              placeholder="Enter email"
+              placeholder="Enter your email"
               required
             />
           </Form.Group>
@@ -84,7 +85,7 @@ const Register = () => {
             <Form.Control
               onChange={(e) => setPassword(e.target.value)}
               type="password"
-              placeholder="Enter Password"
+              placeholder="Enter your Password"
               required
             />
           </Form.Group>
@@ -94,7 +95,7 @@ const Register = () => {
             <Form.Control
               onChange={(e) => setAdress(e.target.value)}
               type="text"
-              placeholder="Enter Password"
+              placeholder="Enter your Adress"
             />
           </Form.Group>
 
@@ -103,7 +104,7 @@ const Register = () => {
             <Form.Control
               onChange={(e) => setPhoneNumber(e.target.value)}
               type="number"
-              placeholder="Enter Password"
+              placeholder="Enter your Phone Number"
 
             />
           </Form.Group>

@@ -62,7 +62,7 @@ const Profil = () => {
                         <div className="profile-avatar-container">
                             {user.image && ( 
                                 <img
-                                src={`/${user.image.filename}` || '/userDefaultImage.png'}
+                                src={user.image.url || '/userDefaultImage.png'}
                                 alt="profile"
                                 className="profile-avatar"
                                 onError={(e) => {

@@ -10,7 +10,7 @@ const apiUrl = process.env.REACT_APP_API_URL || "http://localhost:5000"
 export const register = (regUser, navigate) => async (dispatch) => {
     try {
 
-        dispatch({type: REGISTER_REQUEST})
+        dispatch({ type: REGISTER_REQUEST })
 
         const formData = new FormData()
         formData.append('name', regUser.name)
@@ -21,7 +21,7 @@ export const register = (regUser, navigate) => async (dispatch) => {
         if (regUser.imageFile) {
             formData.append('image', regUser.imageFile)
         }
-        
+
 
         const res = await axios.post(`${apiUrl}/auth/Register`, formData, {
             headers: {
@@ -44,15 +44,42 @@ export const register = (regUser, navigate) => async (dispatch) => {
 
         toast.success('Account Created successfully!');
 
-        setTimeout (()=>{
+        setTimeout(() => {
             navigate('/Profil')
-        },1000)
-        
+        }, 1000)
+
     } catch (error) {
 
-        error.response?.data?.errors.forEach(element => {
-            dispatch(handleError(element.msg))
-        });
+        // error.response?.data?.errors.forEach(element => {
+        //     dispatch(handleError(element.msg))
+        // });
+        if (error.response) {
+            // Check if it's a 404 (wrong endpoint)
+            if (error.response.status === 404) {
+                dispatch(handleError('Login endpoint not found. Please check the server URL.'))
+                return
+            }
+
+            // Handle other API errors - MORE ROBUST VERSION
+            const errorData = error.response.data || {}
+
+            if (Array.isArray(errorData.errors)) {
+                errorData.errors.forEach(element => {
+                    dispatch(handleError(element.msg || 'An error occurred'))
+                })
+            } else if (errorData.message) {
+                dispatch(handleError(errorData.message))
+            } else {
+                // Fallback: use status text or generic message
+                dispatch(handleError(error.response.statusText || 'Login failed. Please try again.'))
+            }
+        } else if (error.request) {
+            // The request was made but no response received
+            dispatch(handleError('Network error. Please check your connection.'))
+        } else {
+            // Something happened in setting up the request
+            dispatch(handleError(error.message || 'Login failed. Please try again.'))
+        }
     }
 }
 
@@ -99,7 +126,7 @@ export const login = (logUser, navigate) => async (dispatch) => {
             dispatch(handleError('Login failed. Please try again.'))
         }
     }
-    }
+}
 
 
 export const current = () => async (dispatch) => {
@@ -161,7 +188,7 @@ export const editUser = (id, updatedUser, navigate) => async (dispatch) => {
                 payload: response.data.user || response.data
             }
         )
-        dispatch(current()) 
+        dispatch(current())
 
         toast.success('Profile updated successfully!');
 
